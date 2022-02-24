@@ -1,25 +1,30 @@
+<div class="block">
 <button (click)="openMenu(menu.USERS)">Users</button>
 <button (click)="openMenu(menu.BOOKS)">Books</button>
 <button (click)="openMenu(menu.BORROWINGS)">Borrowings</button>
-
+</div>
+<div class="block">
 <div *ngIf="actualMenu==menu.USERS"><br>
-  ID:<input [(ngModel)]="user.userId"><p></p>
-  Name:<input [(ngModel)]="user.userName"><p></p><p></p>
-  Contact: <input [(ngModel)]="user.contact" ><p></p>
+  ID :<input [(ngModel)]="user.userId"><p></p>
+  Name :<input [(ngModel)]="user.userName"><p></p><p></p>
+  Contact : <input [(ngModel)]="user.contact" ><p></p>
   <button>Add</button>
 </div>
-
+</div>
+<div class="block">
 <div *ngIf="actualMenu==menu.BOOKS"><br>
-  ID:<input [(ngModel)]="book.bookId"><p></p>
-  Name:<input [(ngModel)]="book.bookName"><p></p>
-  Author: <input [(ngModel)]="book.author"><p></p>
-  Available:<input [(ngModel)]="book.available"><p></p>
+  ID :<input [(ngModel)]="book.bookId"><p></p>
+  Name :<input [(ngModel)]="book.bookName"><p></p>
+  Author : <input [(ngModel)]="book.author"><p></p>
+  Available :<input [(ngModel)]="book.available"><p></p>
   <button>Add</button>
 </div>
-
+</div>
+  <div class="block">
 <div *ngIf="actualMenu==menu.BORROWINGS"><br>
-  ID:<input [(ngModel)]="borrowing.borrowingId"><p></p>
-  Book:<input [(ngModel)]="borrowing.borrowingBook"><p></p>
-  User: <input [(ngModel)]="borrowing.borrowingUser"><p></p>
+  ID :<input [(ngModel)]="borrowing.borrowingId"><p></p>
+  Book :<input [(ngModel)]="borrowing.borrowingBook"><p></p>
+  User : <input [(ngModel)]="borrowing.borrowingUser"><p></p>
   <button>Add</button>
 </div>
+  </div>
