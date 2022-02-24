@@ -19,11 +19,9 @@ export class AppComponent {
   books:any=[];
   borrowings:any=[];
 
-  /*public pridaj():{
-    this.users.push({userId: {this.user.userId},name:{this.user.userName},contact:{user.contact}});
-  }
-
-   */
+//  public pridaj(): void{
+//    this.users.push({userId: {this.user.userId},name:{this.user.userName},contact:{user.contact}});
+//  }
 
 public openMenu(m:MENU){
   this.actualMenu=m;

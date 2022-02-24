@@ -8,6 +8,7 @@
   ID :<input [(ngModel)]="user.userId"><p></p>
   Name :<input [(ngModel)]="user.userName"><p></p><p></p>
   Contact : <input [(ngModel)]="user.contact" ><p></p>
+  <!--(click)="pridaj()"-->
   <button>Add</button><br><br>
   Zoznam:  {{user.userId}} {{user.userName}} {{user.contact}}
 </div>
@@ -18,6 +19,7 @@
   Name :<input [(ngModel)]="book.bookName"><p></p>
   Author : <input [(ngModel)]="book.author"><p></p>
   Available :<input [(ngModel)]="book.available"><p></p>
+  <!--(click)="pridaj()"-->
   <button>Add</button><br><br>
   Zoznam: {{book.bookId}} {{book.bookName}} {{book.author}} {{book.available}}
 </div>
@@ -27,6 +29,7 @@
   ID :<input [(ngModel)]="borrowing.borrowingId"><p></p>
   Book :<input [(ngModel)]="borrowing.borrowingBook"><p></p>
   User : <input [(ngModel)]="borrowing.borrowingUser"><p></p>
+  <!--(click)="pridaj()"-->
   <button>Add</button><br><br>
   Zoznam: {{borrowing.borrowingId}} {{borrowing.borrowingBook}} {{borrowing.borrowingUser}}
 </div>
