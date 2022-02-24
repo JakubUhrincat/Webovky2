@@ -25,4 +25,6 @@ p{
   margin: 30px;
   background: aquamarine;
 }
-
+.list{
+  display: flex; justify-content: center; color:black; font-weight: bolder;
+}

@@ -19,9 +19,17 @@ export class AppComponent {
   books:any=[];
   borrowings:any=[];
 
-//  public pridaj(): void{
-//    this.users.push({userId: {this.user.userId},name:{this.user.userName},contact:{user.contact}});
-//  }
+
+ public pridaj(): void {
+   if (this.actualMenu == this.menu.USERS) {
+     this.users.push({userId: this.user.userId, userName: this.user.userName, contact: this.user.contact});
+   }else if(this.actualMenu == this.menu.BOOKS){
+     this.books.push({bookId: this.book.bookId,bookName: this.book.bookName,author:this.book.author,available:this.book.available})
+   }else
+     this.borrowings.push({borrowingId:this.borrowing.borrowingId,borrowingBook:this.borrowing.borrowingBook,borrowingUser: this.borrowing.borrowingUser});
+   }
+
+
 
 public openMenu(m:MENU){
   this.actualMenu=m;

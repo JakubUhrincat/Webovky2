@@ -9,8 +9,11 @@
   Name :<input [(ngModel)]="user.userName"><p></p><p></p>
   Contact : <input [(ngModel)]="user.contact" ><p></p>
   <!--(click)="pridaj()"-->
-  <button>Add</button><br><br>
-  Zoznam:  {{user.userId}} {{user.userName}} {{user.contact}}
+  <button (click)="pridaj()">Add</button><br><br>
+  <p class="list">Zoznam:</p>
+  <div *ngFor="let u of users">
+    Id: <b>{{u.userId}}</b>&nbsp;&nbsp;Name: <b>{{u.userName}}</b>&nbsp;&nbsp;Contact: <b>{{u.contact}}</b>
+  </div>
 </div>
 </div>
 <div class="block">
@@ -19,9 +22,11 @@
   Name :<input [(ngModel)]="book.bookName"><p></p>
   Author : <input [(ngModel)]="book.author"><p></p>
   Available :<input [(ngModel)]="book.available"><p></p>
-  <!--(click)="pridaj()"-->
-  <button>Add</button><br><br>
-  Zoznam: {{book.bookId}} {{book.bookName}} {{book.author}} {{book.available}}
+  <button (click)="pridaj()">Add</button><br><br>
+  <p class="list">Zoznam:</p>
+  <div *ngFor="let b of books">
+    Id: <b>{{b.bookId}}</b>&nbsp;&nbsp;Name: <b>{{b.bookName}}</b>&nbsp;&nbsp;Author: <b>{{b.author}}</b>&nbsp;&nbsp;Available: <b>{{b.available}}</b>
+  </div>
 </div>
 </div>
   <div class="block">
@@ -29,9 +34,13 @@
   ID :<input [(ngModel)]="borrowing.borrowingId"><p></p>
   Book :<input [(ngModel)]="borrowing.borrowingBook"><p></p>
   User : <input [(ngModel)]="borrowing.borrowingUser"><p></p>
-  <!--(click)="pridaj()"-->
-  <button>Add</button><br><br>
-  Zoznam: {{borrowing.borrowingId}} {{borrowing.borrowingBook}} {{borrowing.borrowingUser}}
-</div>
+  <button (click)="pridaj()">Add</button><br><br>
+  <p class="list">Zoznam:</p>
+  <div *ngFor="let bw of borrowings">
+    Id: <b>{{bw.borrowingId}}</b>&nbsp;&nbsp;Name: <b>{{bw.borrowingBook}}</b>&nbsp;&nbsp;Author: <b>{{bw.borrowingUser}}</b>
   </div>
+</div>
+  <!--(click)="pridaj()"-->
+</div>
+
 
