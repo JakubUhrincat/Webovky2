@@ -1,0 +1,11 @@
+button{
+  margin-right: 2%;
+  background-color: dimgrey;
+  color: white;
+}
+input{
+  position: absolute;
+  left:80px;
+  background-color: darkgrey;
+}
+
