@@ -29,8 +29,6 @@ export class AppComponent {
      this.borrowings.push({borrowingId:this.borrowing.borrowingId,borrowingBook:this.borrowing.borrowingBook,borrowingUser: this.borrowing.borrowingUser});
    }
 
-
-
 public openMenu(m:MENU){
   this.actualMenu=m;
 }
