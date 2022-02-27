@@ -3,6 +3,8 @@
 <button (click)="openMenu(menu.BOOKS)">Books</button>
 <button (click)="openMenu(menu.BORROWINGS)">Borrowings</button>
 </div>
+
+
 <div class="block">
 <div *ngIf="actualMenu==menu.USERS"><br>
   ID :<input [(ngModel)]="user.userId"><p></p>
@@ -16,6 +18,8 @@
   </div>
 </div>
 </div>
+
+
 <div class="block">
 <div *ngIf="actualMenu==menu.BOOKS"><br>
   ID :<input [(ngModel)]="book.bookId"><p></p>
@@ -29,17 +33,26 @@
   </div>
 </div>
 </div>
-  <div class="block">
+
+
+<div class="block">
 <div *ngIf="actualMenu==menu.BORROWINGS"><br>
-  ID :<input [(ngModel)]="borrowing.borrowingId"><p></p>
-  Book :<input [(ngModel)]="borrowing.borrowingBook"><p></p>
-  User : <input [(ngModel)]="borrowing.borrowingUser"><p></p>
+    ID :<input [(ngModel)]="borrowing.borrowingId"><p></p>
+    Book :<input [(ngModel)]="borrowing.borrowingBook"><p></p>
+    User : <input [(ngModel)]="borrowing.borrowingUser"><p></p>
   <button (click)="pridaj()">Add</button><br><br>
   <p class="list">Zoznam:</p>
   <div *ngFor="let bw of borrowings">
-    Id: <b>{{bw.borrowingId}}</b>&nbsp;&nbsp;Name: <b>{{bw.borrowingBook}}</b>&nbsp;&nbsp;Author: <b>{{bw.borrowingUser}}</b>
+    User with id: <b>{{bw.borrowingId}}</b>&nbsp;&nbsp;Book: <b>{{bw.borrowingBook}}</b>&nbsp;&nbsp;User: <b>{{bw.borrowingUser}}</b>
+    <div *ngFor="let b of books">
+      Name of the book: <b>{{b.bookName}}</b>&nbsp;&nbsp;Author: <b>{{b.author}}</b>&nbsp;&nbsp;Available: <b>{{b.available}}</b>
+    </div>
+    <div *ngFor="let u of users">
+      Name: <b>{{u.userName}}</b>&nbsp;&nbsp;Contact: <b>{{u.contact}}</b>
+    </div>
   </div>
-</div>
+</div><
+
   <!--(click)="pridaj()"-->
 </div>
 
