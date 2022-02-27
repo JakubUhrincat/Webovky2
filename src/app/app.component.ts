@@ -31,8 +31,6 @@ export class AppComponent {
  }
 
 
-
-
 public openMenu(m:MENU){
   this.actualMenu=m;
 }

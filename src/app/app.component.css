@@ -1,5 +1,5 @@
 button{
-  margin-right: 2%;
+  margin-right: 11%;
   background-color: darkgrey;
 }
 input{
@@ -23,8 +23,8 @@ p{
   padding: 10px;
   padding-right: 50px;
   margin: 30px;
-  background: aquamarine;
+  background: gray;
 }
 .list{
-  display: flex; justify-content: center; color:black; font-weight: bolder;
+  display: left; justify-content: center; color:black;
 }
