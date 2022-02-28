@@ -19,7 +19,7 @@
 <div *ngIf="actualMenu==menu.BOOKS"><br>
   ID :<input [(ngModel)]="book.bookId"><p></p>
   Name :<input [(ngModel)]="book.bookName"><p></p>
-  Author : <input [(ngModel)]="book.author"><p></p>
+  Author :<input [(ngModel)]="book.author"><p></p>
   Available :<input [(ngModel)]="book.available"><p></p>
   <button type="submit" [disabled]="!book.bookName || !book.bookId || !book.author || !book.available" (click)="pridaj()">Add</button><br><br>
   <p class="list">Zoznam:</p>
