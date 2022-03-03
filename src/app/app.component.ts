@@ -12,10 +12,10 @@ export class AppComponent {
   menu=MENU;
   actualMenu: MENU= MENU.USERS;
 
-  user={userId:"",userName:"",contact:""}
+//  user={userId:"",userName:"",contact:""}
   book={bookId:"",bookName:"",author:"",available:""}
   borrowing={borrowingId:"",borrowingBook:"",borrowingUser:""}
-  users:any=[];
+//  users:any=[];
   books:any=[];
   borrowings:any=[];
 
