@@ -13,10 +13,10 @@ export class AppComponent {
   actualMenu: MENU= MENU.USERS;
 
 //  user={userId:"",userName:"",contact:""}
-  book={bookId:"",bookName:"",author:"",available:""}
+//  book={bookId:"",bookName:"",author:"",available:""}
   borrowing={borrowingId:"",borrowingBook:"",borrowingUser:""}
 //  users:any=[];
-  books:any=[];
+//  books:any=[];
   borrowings:any=[];
 
 

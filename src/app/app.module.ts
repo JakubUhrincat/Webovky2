@@ -8,13 +8,20 @@ import { UsersZoznamComponent } from './users-zoznam/users-zoznam.component';
 import { UsersFormularComponent } from './users-formular/users-formular.component';
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
+import {BookZoznamComponent} from "./book-zoznam/book-zoznam.component";
+import {BookFormularComponent} from "./book-formular/book-formular.component";
+import {BookStrankaComponent} from "./book-stranka/book-stranka.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersStrankaComponent,
     UsersZoznamComponent,
-    UsersFormularComponent
+    UsersFormularComponent,
+
+    BookFormularComponent,
+    BookZoznamComponent,
+    BookStrankaComponent
   ],
     imports: [
         BrowserModule,
