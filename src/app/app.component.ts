@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 enum MENU{USERS,BOOKS,BORROWINGS}
 
@@ -13,13 +14,13 @@ export class AppComponent {
   actualMenu: MENU= MENU.USERS;
 
 //  user={userId:"",userName:"",contact:""}
-  book={bookId:"",bookName:"",author:"",available:""}
-  borrowing={borrowingId:"",borrowingBook:"",borrowingUser:""}
+//  book={bookId:"",bookName:"",author:"",available:""}
+//  borrowing={borrowingId:"",borrowingBook:"",borrowingUser:""}
 //  users:any=[];
-  books:any=[];
-  borrowings:any=[];
+//  books:any=[];
+//  borrowings:any=[];
 
-
+/*
  public pridaj(): void {
    if (this.actualMenu == this.menu.USERS) {
      this.users.push({userId: this.user.userId, userName: this.user.userName, contact: this.user.contact});
@@ -28,9 +29,21 @@ export class AppComponent {
    }else
      this.borrowings.push({borrowingId:this.borrowing.borrowingId,borrowingBook:this.borrowing.borrowingBook,borrowingUser: this.borrowing.borrowingUser});
    }
+*/
 
-public openMenu(m:MENU){
-  this.actualMenu=m;
+  constructor(private router: Router) {
+  }
+
+  public openMenu(m:MENU){
+  if (m == MENU.USERS) {
+    this.router.navigate(['/users']);
+  }
+  else if (m == MENU.BOOKS){
+    this.router.navigate(['/book'])
+  }
+  else (m == MENU.BORROWINGS){
+    this.router.navigate(['/borrowings'])
+  }
 }
 
 }
