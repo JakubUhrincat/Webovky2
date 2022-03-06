@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 enum MENU{USERS,BOOKS,BORROWINGS}
 
@@ -31,10 +32,13 @@ export class AppComponent {
   }
 
 
-
+  constructor(private router: Router) {
+  }
 
   public openMenu(m:MENU){
-    this.actualMenu=m;
+    if (m == MENU.BOOKS) {
+      this.router.navigate(['/book']);
+    }
   }
 
 }
