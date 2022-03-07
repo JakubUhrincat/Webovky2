@@ -16,6 +16,7 @@ input:hover{
 }
 p{
   color: darkgrey;
+  text: bold;
 }
 .block{
   width: 300px;
