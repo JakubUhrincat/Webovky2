@@ -35,11 +35,11 @@ title='priklad'
   }
 
   public openMenu(m: MENU) {
-    /* if (m == MENU.USERS) {
+     if (m == MENU.USERS) {
        this.router.navigate(['/users']);
-     }*/
-    if (m == MENU.BOOKS) {
-      this.router.navigate(['/book']);
+     }
+    else if (m == MENU.BOOKS) {
+      this.router.navigate(['/books']);
     }
   else{
     this.router.navigate(['/borrowings']);
