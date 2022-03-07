@@ -3,6 +3,8 @@
   <button (click)="openMenu(menu.BOOKS)">Books</button>
   <button (click)="openMenu(menu.BORROWINGS)">Borrowings</button>
 </div>
+<router-outlet></router-outlet>
+<!-- PREROBENE
 <div class="block">
   <div *ngIf="actualMenu==menu.USERS"><br>
     ID :<input [(ngModel)]="user.userId"><p></p>
@@ -28,6 +30,25 @@
     </div>
   </div>
 </div>
+
+</div>
+-->
+<!-- PREROBENE
+  <div class="block">
+<div *ngIf="actualMenu==menu.BORROWINGS"><br>
+  ID :<input [(ngModel)]="borrowing.borrowingId"><p></p>
+  Book :<input [(ngModel)]="borrowing.borrowingBook"><p></p>
+  User : <input [(ngModel)]="borrowing.borrowingUser"><p></p>
+  <button type="submit" [disabled]="!borrowing.borrowingId || !borrowing.borrowingBook || !borrowing.borrowingUser"(click)="pridaj()">Add</button><br><br>
+  <p class="list">Zoznam:</p>
+  <div *ngFor="let bw of borrowings">
+    Id: <b>{{bw.borrowingId}}</b>&nbsp;&nbsp;Name: <b>{{bw.borrowingBook}}</b>&nbsp;&nbsp;Author: <b>{{bw.borrowingUser}}</b>
+  </div>
+</div>
+</div>
+
+-->
+<!-- PREROBENE
 <div class="block">
   <div *ngIf="actualMenu==menu.BORROWINGS"><br>
     ID :<input [(ngModel)]="borrowing.borrowingId"><p></p>
@@ -40,3 +61,4 @@
     </div>
   </div>
 </div>
+-->
