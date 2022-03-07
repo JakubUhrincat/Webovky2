@@ -12,7 +12,7 @@ export class AppComponent {
 
   menu = MENU;
   actualMenu: MENU = MENU.USERS;
-
+title='priklad'
 //  user={userId:"",userName:"",contact:""}
   book = {bookId: "", bookName: "", author: "", available: ""}
 //  borrowing={borrowingId:"",borrowingBook:"",borrowingUser:""}
@@ -39,10 +39,10 @@ export class AppComponent {
        this.router.navigate(['/users']);
      }*/
     if (m == MENU.BOOKS) {
-      this.router.navigate(['/book'])
-    }/*
+      this.router.navigate(['/book']);
+    }
   else{
-    this.router.navigate(['/borrowings'])
+    this.router.navigate(['/borrowings']);
   }
 }/*
   public pridaj(): void {
@@ -56,5 +56,5 @@ export class AppComponent {
 
 */
   }
-}
+
 
