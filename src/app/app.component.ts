@@ -45,7 +45,6 @@ export class AppComponent {
     this.router.navigate(['/borrowings'])
   }
 }
-=======
 
   public pridaj(): void {
     if (this.actualMenu == this.menu.USERS) {
