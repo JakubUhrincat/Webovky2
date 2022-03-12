@@ -2,5 +2,8 @@
 ID :<input [(ngModel)]="user.userId"><p></p>
 Name :<input [(ngModel)]="user.userName"><p></p><p></p>
 Contact : <input [(ngModel)]="user.contact" ><p></p>
-  <p class="list">Zoznam:</p>
+  <button (click)="pridaj()">Add </button>
+  <div *ngFor="let u of users">
+    Id: <b>{{u.userId}}</b>&nbsp;&nbsp;Name: <b>{{u.userName}}</b>&nbsp;&nbsp;Contact: <b>{{u.contact}}</b>
+  </div>
 </div>

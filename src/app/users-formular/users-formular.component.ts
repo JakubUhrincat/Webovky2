@@ -8,6 +8,11 @@ import {User} from "../models/user.model";
 })
 export class UsersFormularComponent implements OnInit {
   user: User = {userId: '', userName:'',contact:''};
+  users:User[]=[];
+
+  public pridaj(){
+    this.users.push({userId: this.user.userId, userName: this.user.userName, contact: this.user.contact});
+  }
 
   constructor() { }
 
