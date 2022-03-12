@@ -7,7 +7,7 @@ export class Borrowings{
   //  borrowing={borrowingId:"",borrowingBook:"",borrowingUser:""}
 
 
-  constructor(borrowing:Borrowing) {
+  constructor(borrowing:Borrowings) {
     this.borrowingId = borrowing.borrowingId;
     this.borrowingBook = borrowing.borrowingBook;
     this.borrowingUser = borrowing.borrowingUser;

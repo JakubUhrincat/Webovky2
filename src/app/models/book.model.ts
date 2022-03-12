@@ -2,7 +2,7 @@ export class Book{
   bookId:string;
   bookName:string;
   author:string;
-  avaible:string;
+  available:string;
 
 //  book={bookId:"",bookName:"",author:"",available:""}
 
@@ -10,6 +10,6 @@ export class Book{
     this.bookId = book.bookId;
     this.bookName = book.bookName;
     this.author = book.author;
-    this.avaible = book.avaible;
+    this.available = book.available;
   }
 }

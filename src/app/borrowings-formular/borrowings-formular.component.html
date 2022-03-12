@@ -1,10 +1,6 @@
 <div class="block">
-  <div *ngIf="actualMenu==menu.BORROWINGS"><br>
     ID :<input [(ngModel)]="borrowing.borrowingId"><p></p>
     Book :<input [(ngModel)]="borrowing.borrowingBook"><p></p>
     User : <input [(ngModel)]="borrowing.borrowingUser"><p></p>
-    <button type="submit" [disabled]="!borrowing.borrowingId || !borrowing.borrowingBook || !borrowing.borrowingUser"(click)="pridaj()">Add</button><br><br>
     <p class="list">Zoznam:</p>
-
-  </div>
 </div>

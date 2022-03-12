@@ -9,16 +9,16 @@ enum MENU{USERS,BOOKS,BORROWINGS}
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  title='priklad';
   menu=MENU;
   actualMenu: MENU= MENU.USERS;
 
-//  user={userId:"",userName:"",contact:""}
-//  book={bookId:"",bookName:"",author:"",available:""}
-//  borrowing={borrowingId:"",borrowingBook:"",borrowingUser:""}
-//  users:any=[];
-//  books:any=[];
-//  borrowings:any=[];
+ user={userId:"",userName:"",contact:""}
+  book={bookId:"",bookName:"",author:"",available:""}
+  borrowing={borrowingId:"",borrowingBook:"",borrowingUser:""}
+  users:any=[];
+ books:any=[];
+ borrowings:any=[];
 
 /*
  public pridaj(): void {
@@ -39,13 +39,12 @@ export class AppComponent {
     this.router.navigate(['/users']);
   }
   else if (m == MENU.BOOKS){
-    this.router.navigate(['/book'])
+    this.router.navigate(['/books'])
   }
-  else (m == MENU.BORROWINGS){
+  else{
     this.router.navigate(['/borrowings'])
   }
 }
-=======
 
   public pridaj(): void {
     if (this.actualMenu == this.menu.USERS) {
@@ -59,8 +58,6 @@ export class AppComponent {
 
 
 
-  public openMenu(m:MENU){
-    this.actualMenu=m;
-  }
+
 
 }
