@@ -6,8 +6,8 @@ import {Book} from "../models/book.model";
   templateUrl: './books-zoznam.component.html',
   styleUrls: ['./books-zoznam.component.css']
 })
-export class BooksZoznamComponent{
+export class BooksZoznamComponent {
 
-  book: Book[] = []
+  books: Book[] = [];
 
 }

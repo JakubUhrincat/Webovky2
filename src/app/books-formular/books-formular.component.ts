@@ -6,7 +6,16 @@ import {Book} from "../models/book.model";
   templateUrl: './books-formular.component.html',
   styleUrls: ['./books-formular.component.css']
 })
-export class BooksFormularComponent{
+export class BooksFormularComponent implements OnInit{
+
   book: Book = { bookId: '', bookName: '', author: '',available:'' }
+
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+
 
 }

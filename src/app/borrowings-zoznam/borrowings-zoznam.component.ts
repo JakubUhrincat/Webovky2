@@ -6,7 +6,12 @@ import {Borrowings} from "../models/borrowings.model";
   templateUrl: './borrowings-zoznam.component.html',
   styleUrls: ['./borrowings-zoznam.component.css']
 })
-export class BorrowingsZoznamComponent{
+export class BorrowingsZoznamComponent implements OnInit {
+  borrowings: Borrowings[] = []
 
-borrowings: Borrowings[] = []
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }

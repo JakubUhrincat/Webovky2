@@ -6,7 +6,12 @@ import {Borrowings} from "../models/borrowings.model";
   templateUrl: './borrowings-formular.component.html',
   styleUrls: ['./borrowings-formular.component.css']
 })
-export class BorrowingsFormularComponent {
-  borrowings: Borrowings = { borrowingId: '', borrowingBook: '', borrowingUser: ''}
+export class BorrowingsFormularComponent implements OnInit {
+  borrowing: Borrowings = { borrowingId: '', borrowingBook: '', borrowingUser: ''}
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
 }
