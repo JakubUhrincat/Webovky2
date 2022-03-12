@@ -5,11 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './books-stranka.component.html',
   styleUrls: ['./books-stranka.component.css']
 })
-export class BooksStrankaComponent implements OnInit {
+export class BooksStrankaComponent {
 
-  constructor() { }
 
-  ngOnInit(): void {
   }
-
-}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {User} from "../models/user.model";
 
 @Component({
   selector: 'app-users-zoznam',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users-zoznam.component.css']
 })
 export class UsersZoznamComponent implements OnInit {
+  users: User[] = [];
 
 
 
