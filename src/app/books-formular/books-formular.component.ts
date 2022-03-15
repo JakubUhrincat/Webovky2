@@ -8,8 +8,12 @@ import {Book} from "../models/book.model";
 })
 export class BooksFormularComponent implements OnInit{
 
-  book: Book = { bookId: '', bookName: '', author: '',available:'' }
+  book: Book = { bookId: '', bookName: '', author: ''}
+  books: Book[]=[];
 
+  public pridaj(){
+    this.books.push({bookId: this.book.bookId, bookName: this.book.bookName, author: this.book.author});
+  }
 
   constructor() { }
 

@@ -2,5 +2,9 @@
     ID :<input [(ngModel)]="borrowing.borrowingId"><p></p>
     Book :<input [(ngModel)]="borrowing.borrowingBook"><p></p>
     User : <input [(ngModel)]="borrowing.borrowingUser"><p></p>
-    <p class="list">Zoznam:</p>
+  <button (click)="pridaj()">Add</button>
+  <div *ngFor="let bw of borrowings">
+    Id: <b>{{bw.borrowingId}}</b>&nbsp;&nbsp;Book: <b>{{bw.borrowingBook}}</b>&nbsp;&nbsp;User: <b>{{bw.borrowingUser}}</b>
+  </div>
+
 </div>
