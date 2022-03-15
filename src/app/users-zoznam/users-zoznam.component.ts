@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {User} from "../models/user.model";
 
 @Component({
@@ -14,7 +14,10 @@ export class UsersZoznamComponent implements OnInit {
   public pridaj():void{
     this.users.push({userId: this.user.userId,userName:this.user.userName,contact:this.user.contact})
   }
-
+/*
+  @Input()
+  users: User[] = [];
+*/
   ngOnInit(): void {
   }
 

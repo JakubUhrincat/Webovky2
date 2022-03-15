@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {User} from "../models/user.model";
 
 
@@ -16,6 +16,8 @@ export class UsersFormularComponent implements OnInit {
   }
 
 
+  @Output()
+  pridajOsobu = new EventEmitter<User>();
 
   ngOnInit(): void {
   }
