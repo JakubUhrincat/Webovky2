@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Borrowings} from "../models/borrowings.model";
 
 @Component({
   selector: 'app-borrowings-formular',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./borrowings-formular.component.css']
 })
 export class BorrowingsFormularComponent implements OnInit {
-  borrowings:any=[];
-  actualMenu: any;
-  menu: any;
+  borrowing: Borrowings = { borrowingId: '', borrowingBook: '', borrowingUser: ''}
+  borrowings: Borrowings[]= [];
+
+  public pridaj():void{
+    this.borrowings.push({borrowingId: this.borrowing.borrowingId,borrowingBook: this.borrowing.borrowingBook, borrowingUser: this.borrowing.borrowingUser})
+  }
 
   constructor() { }
 

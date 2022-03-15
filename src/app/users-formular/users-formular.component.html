@@ -1,8 +1,9 @@
 <div class="block">
-  <div *ngIf="actualMenu==menu.USERS"><br>
 ID :<input [(ngModel)]="user.userId"><p></p>
 Name :<input [(ngModel)]="user.userName"><p></p><p></p>
 Contact : <input [(ngModel)]="user.contact" ><p></p>
-    <button type="submit" [disabled]="!user.userId || !user.userName || !user.contact" (click)="pridaj()">Add</button><br><br>
+  <button (click)="pridaj()">Add </button>
+  <div *ngFor="let u of users">
+    Id: <b>{{u.userId}}</b>&nbsp;&nbsp;Name: <b>{{u.userName}}</b>&nbsp;&nbsp;Contact: <b>{{u.contact}}</b>
   </div>
 </div>

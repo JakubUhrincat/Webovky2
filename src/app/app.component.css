@@ -9,7 +9,7 @@ input{
 }
 
 button:hover{
-  background-color:white;
+  background-color:antiquewhite;
 }
 input:hover{
   background-color:white;
@@ -26,6 +26,4 @@ p{
   margin: 30px;
   background: gray;
 }
-.list{
-  display: left; justify-content: center; color:black;
-}
+
