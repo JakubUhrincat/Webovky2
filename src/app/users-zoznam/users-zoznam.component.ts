@@ -7,9 +7,13 @@ import {User} from "../models/user.model";
   styleUrls: ['./users-zoznam.component.css']
 })
 export class UsersZoznamComponent implements OnInit {
-  users: User[] = [];
 
+  user: User={userId: "", userName: "", contact: ""};
+  users:User[] =[];
 
+  public pridaj():void{
+    this.users.push({userId: this.user.userId,userName:this.user.userName,contact:this.user.contact})
+  }
 
   ngOnInit(): void {
   }

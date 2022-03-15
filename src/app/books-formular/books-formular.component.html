@@ -2,8 +2,11 @@
     ID: <input [(ngModel)]="book.bookId"><p></p>
     Name: <input [(ngModel)]="book.bookName"><p></p>
     Author: <input [(ngModel)]="book.author"><p></p>
-    Available: <input [(ngModel)]="book.available"><p></p>
-    <p class="list">Zoznam:</p>
-
+  <button (click)="pridaj()">Add</button>
+  <div *ngFor="let b of books">
+    Id: <b>{{b.bookId}}</b>&nbsp;&nbsp;Name: <b>{{b.bookName}}</b>&nbsp;&nbsp;Author: <b>{{b.author}}</b>
   </div>
+
+
+</div>
 

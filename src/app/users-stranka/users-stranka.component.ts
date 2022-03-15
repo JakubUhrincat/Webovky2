@@ -5,9 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './users-stranka.component.html',
   styleUrls: ['./users-stranka.component.css']
 })
-export class UsersStrankaComponent implements OnInit {
-
-  ngOnInit(): void {
-  }
+export class UsersStrankaComponent{
 
 }
