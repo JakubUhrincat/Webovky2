@@ -1,7 +1,28 @@
-.block{
-  border: black 1px solid;
+button{
+  margin-right: 11%;
   background-color: darkgrey;
-  margin: 30px;
+}
+input{
+  position: absolute;
+  left: 150px;
+  background-color: darkgrey;
+}
+
+button:hover{
+  background-color:antiquewhite;
+}
+input:hover{
+  background-color:white;
+}
+p{
+  color: darkgrey;
+  text: bold;
+}
+.block{
+  width: 300px;
+  border: 2px solid black;
   padding: 10px;
-  width: 250px;
+  padding-right: 50px;
+  margin: 30px;
+  background: gray;
 }
