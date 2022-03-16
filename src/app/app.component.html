@@ -3,6 +3,8 @@
 <button (click)="openMenu(menu.BOOKS)">Books</button>
 <button (click)="openMenu(menu.BORROWINGS)">Borrowings</button>
 </div>
+<router-outlet></router-outlet>
+<!-- PREROBENE
 <div class="block">
 <div *ngIf="actualMenu==menu.USERS"><br>
   ID :<input [(ngModel)]="user.userId"><p></p>
@@ -15,9 +17,9 @@
   </div>
 </div>
 </div>
-
-<button (click)="openMenu(menu.BOOKS)">Books</button>
-<!--<div class="block">
+ -->
+<!-- PREROBENE
+<div class="block">
 <div *ngIf="actualMenu==menu.BOOKS"><br>
   ID :<input [(ngModel)]="book.bookId"><p></p>
   Name :<input [(ngModel)]="book.bookName"><p></p>
@@ -31,6 +33,7 @@
 </div>
 </div>
 -->
+<!-- PREROBENE
   <div class="block">
 <div *ngIf="actualMenu==menu.BORROWINGS"><br>
   ID :<input [(ngModel)]="borrowing.borrowingId"><p></p>
@@ -43,5 +46,5 @@
   </div>
 </div>
 </div>
-<router-outlet></router-outlet>
 
+-->

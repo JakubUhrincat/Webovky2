@@ -8,9 +8,12 @@ import { UsersZoznamComponent } from './users-zoznam/users-zoznam.component';
 import { UsersFormularComponent } from './users-formular/users-formular.component';
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
-import {BookZoznamComponent} from "./book-zoznam/book-zoznam.component";
-import {BookFormularComponent} from "./book-formular/book-formular.component";
-import {BookStrankaComponent} from "./book-stranka/book-stranka.component";
+import { BooksFormularComponent } from './books-formular/books-formular.component';
+import { BooksStrankaComponent } from './books-stranka/books-stranka.component';
+import { BooksZoznamComponent } from './books-zoznam/books-zoznam.component';
+import { BorrowingsFormularComponent } from './borrowings-formular/borrowings-formular.component';
+import { BorrowingsStrankaComponent } from './borrowings-stranka/borrowings-stranka.component';
+import { BorrowingsZoznamComponent } from './borrowings-zoznam/borrowings-zoznam.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +21,12 @@ import {BookStrankaComponent} from "./book-stranka/book-stranka.component";
     UsersStrankaComponent,
     UsersZoznamComponent,
     UsersFormularComponent,
-
-    BookFormularComponent,
-    BookZoznamComponent,
-    BookStrankaComponent
+    BooksFormularComponent,
+    BooksStrankaComponent,
+    BooksZoznamComponent,
+    BorrowingsFormularComponent,
+    BorrowingsStrankaComponent,
+    BorrowingsZoznamComponent
   ],
     imports: [
         BrowserModule,
