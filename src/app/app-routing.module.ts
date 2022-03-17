@@ -3,6 +3,7 @@ import {UsersStrankaComponent} from "./users/users-stranka/users-stranka.compone
 import {NgModule} from "@angular/core";
 import {BorrowingsStrankaComponent} from "./borrowings/borrowings-stranka/borrowings-stranka.component";
 import {BooksStrankaComponent} from "./books/books-stranka/books-stranka.component";
+import {MenuComponent} from './menu/menu.component';
 
 const routes: Routes = [
   {
@@ -16,8 +17,13 @@ const routes: Routes = [
   {
     path: 'books',
     component: BooksStrankaComponent
+  },
+  {
+    path: '',
+    component: MenuComponent
   }
 ]
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

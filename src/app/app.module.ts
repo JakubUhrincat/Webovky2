@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MenuComponent} from './menu/menu.component';
 import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
 import { UsersStrankaComponent } from './users/users-stranka/users-stranka.component';
@@ -21,6 +21,7 @@ import { BorrowingsZoznamComponent } from './borrowings/borrowings-zoznam/borrow
     UsersStrankaComponent,
     UsersZoznamComponent,
     UsersFormularComponent,
+    MenuComponent,
     BooksFormularComponent,
     BooksStrankaComponent,
     BooksZoznamComponent,
