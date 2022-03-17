@@ -1,8 +1,8 @@
 import {RouterModule, Routes} from "@angular/router";
-import {UsersStrankaComponent} from "./users-stranka/users-stranka.component";
+import {UsersStrankaComponent} from "./users/users-stranka/users-stranka.component";
 import {NgModule} from "@angular/core";
-import {BorrowingsStrankaComponent} from "./borrowings-stranka/borrowings-stranka.component";
-import {BooksStrankaComponent} from "./books-stranka/books-stranka.component";
+import {BorrowingsStrankaComponent} from "./borrowings/borrowings-stranka/borrowings-stranka.component";
+import {BooksStrankaComponent} from "./books/books-stranka/books-stranka.component";
 
 const routes: Routes = [
   {

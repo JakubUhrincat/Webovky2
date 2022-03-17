@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Borrowings} from "../models/borrowings.model";
+import {Borrowings} from "../../models/borrowings.model";
 
 @Component({
   selector: 'app-borrowings-zoznam',
