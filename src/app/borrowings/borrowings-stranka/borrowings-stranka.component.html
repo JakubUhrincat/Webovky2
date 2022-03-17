@@ -1,2 +1,20 @@
-<app-borrowings-formular></app-borrowings-formular>
-<app-borrowings-zoznam></app-borrowings-zoznam>
+<div class="block">
+
+  <app-users-formular [borrowing]="vypozickaNaUpravu"
+                      (addBorrowing)="pridaj($event)"
+                      (editBorrowing)="uprav($event)">
+  </app-users-formular>
+
+  <app-users-zoznam [borrowings]="borrowings"
+                    (upravOsobu)="upravZoZoznamu($event)"
+                    (zmazOsobu)="zmazZoZoznamu($event)">
+  </app-users-zoznam>
+
+  <br>
+
+  <div>
+    <button (click)="chodSpat()">SPÄŤ</button>
+  </div>
+
+
+</div>

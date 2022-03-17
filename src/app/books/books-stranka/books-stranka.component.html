@@ -1,2 +1,20 @@
-<app-books-formular></app-books-formular>
-<app-books-zoznam></app-books-zoznam>
+<div class="block">
+
+  <app-books-formular [book]="knihaNaUpravu"
+                      (addBook)="pridaj($event)"
+                      (editBook)="uprav($event)">
+  </app-books-formular>
+
+  <app-books-zoznam [books]="books"
+                    (upravKnihu)="upravZoZoznamu($event)"
+                    (zmazKnihu)="zmazZoZoznamu($event)">
+  </app-books-zoznam>
+
+  <br>
+
+  <div>
+    <button (click)="chodSpat()">SPÄŤ</button>
+  </div>
+
+
+</div>

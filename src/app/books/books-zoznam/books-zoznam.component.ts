@@ -1,20 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import {Book} from "../../models/book.model";
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Book} from '../../models/book.model';
 
 @Component({
   selector: 'app-books-zoznam',
   templateUrl: './books-zoznam.component.html',
   styleUrls: ['./books-zoznam.component.css']
 })
-export class BooksZoznamComponent implements OnInit{
-  book: Book = { bookId: '', bookName: '', author: ''}
+export class BooksZoznamComponent {
+
+  @Input()
   books: Book[] = [];
 
-  public pridaj(){
-    this.books.push({bookId: this.book.bookId, bookName: this.book.bookName, author: this.book.author});
+  @Output()
+  editBook: EventEmitter<Book> = new EventEmitter<Book>();
+
+  @Output()
+  deleteBook: EventEmitter<Book> = new EventEmitter<Book>();
+
+  uprav(book: Book): void {
+    this.editBook.emit(book);
   }
 
-  ngOnInit(): void {
+  zmaz(book: Book): void {
+    this.deleteBook.emit(book);
   }
-
 }
