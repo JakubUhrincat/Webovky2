@@ -1,2 +1,20 @@
-<app-users-formular></app-users-formular>
-<app-users-zoznam></app-users-zoznam>
+<div class="block">
+
+  <app-users-formular [user]="osobaNaUpravu"
+                      (pridajOsobu)="pridaj($event)"
+                      (upravOsobu)="uprav($event)">
+  </app-users-formular>
+
+  <app-users-zoznam [users]="users"
+                    (upravOsobu)="upravZoZoznamu($event)"
+                    (zmazOsobu)="zmazZoZoznamu($event)">
+  </app-users-zoznam>
+
+  <br>
+
+  <div>
+    <button (click)="chodSpat()">SPÄŤ</button>
+  </div>
+
+
+</div>

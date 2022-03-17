@@ -1,5 +1,29 @@
-<p class="list">Zoznam:</p>
-<div *ngFor="let u of users">
-  Id: <b>{{u.userId}}</b>&nbsp;&nbsp;Name: <b>{{u.userName}}</b>&nbsp;&nbsp;Contact: <b>{{u.contact}}</b>
-</div>
+<div class="block">
 
+  <div *ngIf="!users || users?.length === 0">
+    List of users is empty.
+  </div>
+
+
+  <table class="table" *ngIf="users?.length > 0">
+    <thead>
+    <tr>
+      <th>Username</th>
+      <th>Contact</th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let u of users">
+      <td>{{ u.userName }}</td>
+      <td>{{ u.contact }}</td>
+      <td>
+        <button (click)="uprav(user)">Edit</button>
+        <button (click)="zmaz(user)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

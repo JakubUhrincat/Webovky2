@@ -1,8 +1,19 @@
 <div class="block">
-  <div *ngIf="actualMenu==menu.USERS"><br>
-ID :<input [(ngModel)]="user.userId"><p></p>
-Name :<input [(ngModel)]="user.userName"><p></p><p></p>
-Contact : <input [(ngModel)]="user.contact" ><p></p>
-    <button type="submit" [disabled]="!user.userId || !user.userName || !user.contact" (click)="pridaj()">Add</button><br><br>
-  </div>
+  <form [formGroup]="form">
+
+    <label>:Username
+      <input formControlName="username">
+    </label>
+    <br>
+
+    <label>Contact:
+      <input formControlName="contact">
+    </label>
+    <br>
+
+    <button (click)="pridaj()" *ngIf="form.value.id === null">pridaj</button>
+    <button (click)="uprav()" *ngIf="form.value.id !== null">uprav</button>
+    <button (click)="zrus()">zrus</button>
+
+  </form>
 </div>
