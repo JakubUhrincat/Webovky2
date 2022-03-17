@@ -1,21 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import {User} from "../../models/user.model";
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {User} from '../../models/user.model';
 
 @Component({
   selector: 'app-users-zoznam',
   templateUrl: './users-zoznam.component.html',
   styleUrls: ['./users-zoznam.component.css']
 })
-export class UsersZoznamComponent implements OnInit {
+export class UsersZoznamComponent {
 
-  user: User={userId: "", userName: "", contact: ""};
-  users:User[] =[];
+  @Input()
+  users: User[] = [];
 
-  public pridaj():void{
-    this.users.push({userId: this.user.userId,userName:this.user.userName,contact:this.user.contact})
+  @Output()
+  editUser: EventEmitter<User> = new EventEmitter<User>();
+
+  @Output()
+  deleteUser: EventEmitter<User> = new EventEmitter<User>();
+
+  uprav(user: User): void {
+    this.editUser.emit(user);
   }
 
-  ngOnInit(): void {
+  zmaz(user: User): void {
+    this.deleteUser.emit(user);
   }
-
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MenuComponent} from './menu/menu.component';
 import { AppComponent } from './app.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { UsersStrankaComponent } from './users/users-stranka/users-stranka.component';
 import { UsersZoznamComponent } from './users/users-zoznam/users-zoznam.component';
 import { UsersFormularComponent } from './users/users-formular/users-formular.component';
@@ -14,6 +14,8 @@ import { BooksZoznamComponent } from './books/books-zoznam/books-zoznam.componen
 import { BorrowingsFormularComponent } from './borrowings/borrowings-formular/borrowings-formular.component';
 import { BorrowingsStrankaComponent } from './borrowings/borrowings-stranka/borrowings-stranka.component';
 import { BorrowingsZoznamComponent } from './borrowings/borrowings-zoznam/borrowings-zoznam.component';
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -29,12 +31,15 @@ import { BorrowingsZoznamComponent } from './borrowings/borrowings-zoznam/borrow
     BorrowingsStrankaComponent,
     BorrowingsZoznamComponent
   ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        RouterModule,
-        AppRoutingModule
-    ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
+
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

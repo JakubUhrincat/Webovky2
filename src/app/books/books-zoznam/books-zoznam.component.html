@@ -1,6 +1,30 @@
 <div class="block">
-  <button (click)="pridaj()">Add</button>
-<div *ngFor="let b of books">
-  Id: <b>{{b.bookId}}</b>&nbsp;&nbsp;Name: <b>{{b.bookName}}</b>&nbsp;&nbsp;Author: <b>{{b.author}}</b>
+
+  <div *ngIf="!books || books?.length === 0">
+    List of books is empty.
+  </div>
+
+
+  <table class="table" *ngIf="books?.length > 0">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Author</th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let b of books">
+      <td>{{ b.bookName }}</td>
+      <td>{{ b.author }}</td>
+      <td>
+        <button (click)="uprav(book)">Edit</button>
+        <button (click)="zmaz(book)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
 </div>
-</div>
+

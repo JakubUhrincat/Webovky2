@@ -1,6 +1,29 @@
 <div class="block">
-  <button (click)="pridaj()">Add</button>
-<div *ngFor="let bw of borrowings">
-  Id: <b>{{bw.borrowingId}}</b>&nbsp;&nbsp;Name: <b>{{bw.borrowingBook}}</b>&nbsp;&nbsp;Author: <b>{{bw.borrowingUser}}</b>
-</div>
+
+  <div *ngIf="!borrowings || borrowings?.length === 0">
+    List of borrowings is empty.
+  </div>
+
+
+  <table class="table" *ngIf="borrowings?.length > 0">
+    <thead>
+    <tr>
+      <th>Book</th>
+      <th>User</th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let bw of borrowings">
+      <td>{{ bw.borrowingBook}}</td>
+      <td>{{ bw.borrowingUser }}</td>
+      <td>
+        <button (click)="uprav(borrowing)">Edit</button>
+        <button (click)="zmaz(borrowing)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
 </div>
