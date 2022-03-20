@@ -1,11 +1,6 @@
 <div class="block">
 
-  <div *ngIf="!books || books?.length === 0">
-    List of books is empty.
-  </div>
-
-
-  <table class="table" *ngIf="books?.length > 0">
+  <table class="table">
     <thead>
     <tr>
       <th>Name</th>
@@ -19,8 +14,8 @@
       <td>{{ b.bookName }}</td>
       <td>{{ b.author }}</td>
       <td>
-        <button (click)="uprav(book)">Edit</button>
-        <button (click)="zmaz(book)">Delete</button>
+        <button (click)="uprav(b)">Edit</button>
+        <button (click)="zmaz(b)">Delete</button>
       </td>
     </tr>
     </tbody>

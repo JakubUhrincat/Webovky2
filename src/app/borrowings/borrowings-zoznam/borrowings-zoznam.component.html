@@ -1,11 +1,6 @@
 <div class="block">
 
-  <div *ngIf="!borrowings || borrowings?.length === 0">
-    List of borrowings is empty.
-  </div>
-
-
-  <table class="table" *ngIf="borrowings?.length > 0">
+  <table class="table">
     <thead>
     <tr>
       <th>Book</th>
@@ -19,11 +14,12 @@
       <td>{{ bw.borrowingBook}}</td>
       <td>{{ bw.borrowingUser }}</td>
       <td>
-        <button (click)="uprav(borrowing)">Edit</button>
-        <button (click)="zmaz(borrowing)">Delete</button>
+        <button (click)="uprav(bw)">Edit</button>
+        <button (click)="zmaz(bw)">Delete</button>
       </td>
     </tr>
     </tbody>
   </table>
 
 
+</div>
