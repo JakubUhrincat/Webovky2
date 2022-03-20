@@ -8,7 +8,7 @@ import {UsersServiceService} from "../../../environments/users-service.service";
   styleUrls: ['./users-stranka.component.css'],
   selector: 'app-users-stranka'
 })
-export class UsersStrankaComponent {
+export class UsersStrankaComponent implements OnInit{
 
   users: User[] = [];
 
