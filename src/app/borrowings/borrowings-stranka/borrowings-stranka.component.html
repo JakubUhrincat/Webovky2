@@ -1,20 +1,13 @@
-<div class="block">
+<div>
+  <button (click)="chodSpat()">BACK</button>
+</div>
 
-  <app-users-formular [borrowing]="vypozickaNaUpravu"
+<app-borrowings-formular [borrowing]="vypozickaNaUpravu"
                       (addBorrowing)="pridaj($event)"
                       (editBorrowing)="uprav($event)">
-  </app-users-formular>
+  </app-borrowings-formular>
 
-  <app-users-zoznam [borrowings]="borrowings"
-                    (upravOsobu)="upravZoZoznamu($event)"
-                    (zmazOsobu)="zmazZoZoznamu($event)">
-  </app-users-zoznam>
-
-  <br>
-
-  <div>
-    <button (click)="chodSpat()">SPÄŤ</button>
-  </div>
-
-
-</div>
+  <app-borrowings-zoznam [borrowings]="borrowings"
+                    (editBorrowing)="upravZoZoznamu($event)"
+                    (deleteBorrowing)="zmazZoZoznamu($event)">
+  </app-borrowings-zoznam>
