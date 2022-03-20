@@ -12,7 +12,7 @@ import {Borrowings} from "../../models/borrowings.model";
 export class BorrowingsFormularComponent {
 
   @Input()
-  set borrowing(data: Borrowings) {
+  set borrowing(data: Borrowings | undefined) {
     if (data) {
       this.fillForm(data);
     }
@@ -27,10 +27,6 @@ export class BorrowingsFormularComponent {
   form: FormGroup;
 
   constructor() {
-    this.createForm();
-  }
-
-  private createForm(): void {
     this.form = new FormGroup({
       id: new FormControl(null),
       book: new FormControl(null),
@@ -39,16 +35,11 @@ export class BorrowingsFormularComponent {
   }
 
   private fillForm(borrowing: Borrowings): void {
-
-
-
-    this.form.controls.id.setValue(borrowing.borrowingId);
-    this.form.controls.book.setValue(borrowing.borrowingBook);
-    this.form.controls.user.setValue(borrowing.borrowingUser);
+    this.form.setValue({id:borrowing.borrowingId,book:borrowing.borrowingBook,user:borrowing.borrowingUser})
   }
 
   public pridaj(): void {
-    this.addBorrowing.emit({ id: Math.random().toString(), book: this.form.value.book, user: this.form.value.user});
+    this.addBorrowing.emit({ borrowingId: Math.random().toString(), borrowingBook: this.form.value.book, borrowingUser: this.form.value.user});
     this.form.reset();
   }
 

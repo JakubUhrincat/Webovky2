@@ -2,7 +2,7 @@ export class User{
 
   userName: string;
   contact: string;
-  userId: string;
+  userId?: string;
 
 //  user={userId:"",userName:"",contact:""}
 

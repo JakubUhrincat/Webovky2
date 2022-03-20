@@ -12,7 +12,7 @@ import {User} from "../../models/user.model";
 export class UsersFormularComponent {
 
   @Input()
-  set user(data: User) {
+  set user(data: User | undefined) {
     if (data) {
       this.fillForm(data);
     }
@@ -27,41 +27,22 @@ export class UsersFormularComponent {
   form: FormGroup;
 
   constructor() {
-    this.createForm();
-  }
-
-  private createForm(): void {
     this.form = new FormGroup({
       id: new FormControl(null),
       username: new FormControl(null),
       contact: new FormControl(null)
     });
+
   }
 
+
   private fillForm(user: User): void {
-    /*
-    treba zadat hodnoty pre vsetky formControls vo formGroup, ak nie, hodi error
-    this.form.setValue({
-      meno: osoba.meno,
-      priezvisko: osoba.priezvisko
-    });
-    */
+    this.form.setValue({id:user.userId,username:user.userName,contact:user.contact})
 
-    /* netreba zadat vsetky hodnoty formControls vo formGroup
-    this.form.patchValue({
-      meno: osoba.meno,
-      priezvisko: osoba.priezvisko
-    });
-     */
-
-
-    this.form.controls.id.setValue(user.userId);
-    this.form.controls.username.setValue(user.userName);
-    this.form.controls.contact.setValue(user.contact);
   }
 
   public pridaj(): void {
-    this.addUser.emit({ id: Math.random().toString(), username: this.form.value.username, contact: this.form.value.contact});
+    this.addUser.emit({ userId: Math.random().toString(), userName: this.form.value.username, contact: this.form.value.contact});
     this.form.reset();
   }
 
