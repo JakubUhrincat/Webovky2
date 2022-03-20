@@ -13,3 +13,16 @@ export class User{
     this.userId = user.userId;
   }
 }
+
+export class UsersList {
+  userId?: string;
+  userName: string;
+  contact: string;
+
+  constructor(user: UsersList) {
+    this.userId = user.userId;
+    this.userName = user.userName;
+    this.contact = user.contact;
+  }
+}
+
