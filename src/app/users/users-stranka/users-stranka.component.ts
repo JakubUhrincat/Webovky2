@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {User} from '../../models/user.model';
+import {UsersServiceService} from "../../../environments/users-service.service";
 
 @Component({
   templateUrl: './users-stranka.component.html',
@@ -13,7 +14,21 @@ export class UsersStrankaComponent {
 
   osobaNaUpravu?: User;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private userService: UsersServiceService) { }
+
+  ngOnInit(): void {
+    this.refreshUsers();
+  }
+
+  refreshUsers(): void {
+    this.userService.getUsers().subscribe(data => {
+      console.log('prislo:', data);
+      this.users = [];
+      for (const d of data) {
+        this.users.push({ userId: d.userId, userName: d.userName, contact: d.contact});
+      }
+    });
+  }
 
   chodSpat(): void {
     this.router.navigate(['']);
