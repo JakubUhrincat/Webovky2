@@ -1,7 +1,7 @@
 import { Component,OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {User} from '../../models/user.model';
-import {UsersServiceService} from "../../../environments/users-service.service";
+import {UsersServiceService} from "../../../users-service.service";
 
 @Component({
   templateUrl: './users-stranka.component.html',
