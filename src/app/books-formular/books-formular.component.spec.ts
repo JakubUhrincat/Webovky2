@@ -10,7 +10,7 @@ describe('BooksFormularComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ BooksFormularComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

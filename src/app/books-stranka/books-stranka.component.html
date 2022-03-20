@@ -1,2 +1,13 @@
-<app-books-formular></app-books-formular>
-<app-borrowings-zoznam></app-borrowings-zoznam>
+<div>
+  <button (click)="chodSpat()">BACK</button>
+</div>
+
+<app-books-formular [book]="knihaNaUpravu"
+                    (addBook)="pridaj($event)"
+                    (editBook)="uprav($event)">
+</app-books-formular>
+
+<app-books-zoznam [books]="books"
+                  (editBook)="upravZoZoznamu($event)"
+                  (deleteBook)="zmazZoZoznamu($event)">
+</app-books-zoznam>

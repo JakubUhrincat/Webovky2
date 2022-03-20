@@ -10,7 +10,7 @@ describe('BooksStrankaComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ BooksStrankaComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

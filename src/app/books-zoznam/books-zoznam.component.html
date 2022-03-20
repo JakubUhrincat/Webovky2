@@ -1,4 +1,24 @@
+<div class="block">
 
-<div *ngFor="let b of books">
-  Id: <b>{{b.bookId}}</b>&nbsp;&nbsp;Name: <b>{{b.bookName}}</b>&nbsp;&nbsp;Author: <b>{{b.author}}</b>&nbsp;&nbsp;Available: <b>{{b.available}}</b>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Author</th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let b of books">
+      <td>{{ b.bookName }}</td>
+      <td>{{ b.author }}</td>
+      <td>
+        <button (click)="uprav(b)">Edit</button>
+        <button (click)="zmaz(b)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
 </div>
