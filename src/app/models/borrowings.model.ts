@@ -1,6 +1,6 @@
 export class Borrowings{
 
-  borrowingId:string;
+  borrowingId?:string;
   borrowingBook:string;
   borrowingUser:string;
 

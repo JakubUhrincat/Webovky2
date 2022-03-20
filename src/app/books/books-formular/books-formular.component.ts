@@ -12,7 +12,7 @@ import {Book} from "../../models/book.model";
 export class BooksFormularComponent {
 
   @Input()
-  set book(data: Book) {
+  set book(data: Book | undefined) {
     if (data) {
       this.fillForm(data);
     }
@@ -27,10 +27,6 @@ export class BooksFormularComponent {
   form: FormGroup;
 
   constructor() {
-    this.createForm();
-  }
-
-  private createForm(): void {
     this.form = new FormGroup({
       id: new FormControl(null),
       name: new FormControl(null),
@@ -39,15 +35,11 @@ export class BooksFormularComponent {
   }
 
   private fillForm(book: Book): void {
-
-
-    this.form.controls.id.setValue(book.bookId);
-    this.form.controls.name.setValue(book.bookName);
-    this.form.controls.author.setValue(book.author);
+    this.form.setValue({id:book.bookId,name:book.bookName,author:book.author})
   }
 
   public pridaj(): void {
-    this.addBook.emit({ id: Math.random().toString(), name: this.form.value.name, author: this.form.value.author});
+    this.addBook.emit({ bookId: Math.random().toString(), bookName: this.form.value.name, author: this.form.value.author});
     this.form.reset();
   }
 
