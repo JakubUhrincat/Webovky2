@@ -1,19 +1,35 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {Borrowings} from '../../models/borrowings.model';
+import {BorrowingsServiceService} from "../../../borrowings-service.service";
+
 
 @Component({
   templateUrl: './borrowings-stranka.component.html',
   styleUrls: ['./borrowings-stranka.component.css'],
   selector: 'app-borrowings-stranka'
 })
-export class BorrowingsStrankaComponent {
+export class BorrowingsStrankaComponent implements OnInit{
 
   borrowings: Borrowings[] = [];
 
   vypozickaNaUpravu?: Borrowings;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private borrowingsService: BorrowingsServiceService) { }
+
+  ngOnInit(): void {
+    this.refreshBorrowings();
+  }
+
+  refreshBorrowings(): void {
+    this.borrowingsService.getBorrowings().subscribe(data => {
+      console.log('prislo:', data);
+      this.borrowings = [];
+      for (const d of data) {
+        this.borrowings.push({ borrowingId: d.borrowingId, borrowingBook: d.borrowingBook, borrowingUser: d.borrowingUser});
+      }
+    });
+  }
 
   chodSpat(): void {
     this.router.navigate(['']);
