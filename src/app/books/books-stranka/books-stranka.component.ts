@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
 import {Book} from '../../models/book.model';
+import {BookServiceService} from '../../../book-service.service';
 
 @Component({
   templateUrl: './books-stranka.component.html',
@@ -13,7 +14,21 @@ export class BooksStrankaComponent {
 
   knihaNaUpravu?: Book;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private bookService: BookServiceService) { }
+
+  ngOnInit(): void {
+    this.refreshBooks();
+  }
+
+  refreshBooks(): void {
+    this.bookService.getBooks().subscribe(data => {
+      console.log('prislo:', data);
+      this.books = [];
+      for (const d of data) {
+        this.books.push({ bookId: d.bookId, bookName: d.bookName, author: d.author});
+      }
+    });
+  }
 
   chodSpat(): void {
     this.router.navigate(['']);
